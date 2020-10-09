@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+nav {
+  padding: 10px 50px;
+}
+
+nav #joinus {
+  border-radius: 25px;
+  padding: 10px 20px;
+  background-color: white;
+  border: lightgray 2px solid;
+}
+
+img {
+  width: 200px;
+}
+/*# sourceMappingURL=styles.css.map */
