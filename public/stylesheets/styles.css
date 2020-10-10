@@ -54,6 +54,7 @@ nav #joinus {
   border-radius: 25px;
   padding: 10px 20px;
   background-color: white;
+  outline: none;
   border: lightgray 2px solid;
 }
 
@@ -124,6 +125,7 @@ nav #joinus {
   background-color: orange;
   padding: 6px 10px;
   border: none;
+  outline: none;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -430,23 +432,25 @@ nav #joinus {
   border-radius: 30px;
   padding: 10px 20px;
   width: 30%;
+  outline: none;
 }
 
 .signup button {
-  position: absolute;
+  position: relative;
   background-color: orange;
   color: white;
   border: none;
-  right: 540px;
-  top: 3477px;
+  outline: none;
+  right: 0px;
   border-radius: 25px;
-  padding: 5px 10px;
+  padding: 9px 10px;
 }
 
 footer {
   background-color: black;
   color: white;
   padding: 30px 100px;
+  font-size: 10px;
 }
 
 footer .sections {
