@@ -6,10 +6,20 @@
     box-sizing: border-box;
 }
 
+@mixin reviewPhoto{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: pink;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 body{
     font-family: 'Poppins', sans-serif;
 }
 
+//NAVIGATION
 nav{
     padding: 10px 50px;
     display: flex;
@@ -47,6 +57,8 @@ nav{
     }
 }
 
+
+//PART 1
 .home{
     display: flex;
     align-items: center;
@@ -114,6 +126,7 @@ nav{
 
 }
 
+//PART 2
 .lookaround{
     background-color: black;
     color: white;
@@ -169,6 +182,8 @@ nav{
     }
 }
 
+
+//PART 3
 .marketplace{
     padding: 60px 100px;
     display: flex;
@@ -226,6 +241,8 @@ nav{
     }
 }
 
+
+//PART 4
 .app{
     background-color: black;
     color:white;
@@ -268,5 +285,124 @@ nav{
 }
 
 
+
+.discover{
+    display: flex;
+    padding: 50px 100px;
+    justify-content: space-between;
+
+    .left{
+        margin-right: 80px;
+        
+        h1{
+            margin-bottom: 20px;
+        }
+
+        img{
+            width: 270px;
+            border-radius: 150px;
+            text-align: center;
+            margin: 20px 70px;
+        }
+    }
+
+    .right{
+        margin-left: 100px;
+        border-right: orange 4px solid;
+        padding-right: 20px;
+        .review{
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.10);
+            margin-bottom: 20px;
+            padding: 20px 25px;
+            border-radius: 15px;
+    
+            h4{
+                font-size: 30px;
+                margin-bottom: 30px;
+            }
+            .author{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .about{
+                    display: flex;
+
+                    #image1{
+                        @include reviewPhoto;
+                        background-image: url('/images/photo8.jpg');
+                    }
+                    #image2{
+                        @include reviewPhoto;
+                        background-image: url('/images/photo9.jpg');
+                    }
+
+                    .person{
+                        margin-left: 10px;
+                        margin-top: 10px;
+                        line-height: 0.5;
+                    }
+                }
+            }
+            span{
+                color: orange;
+            }
+        }
+    }
+}
+
+
+.signup{
+    background-color: black;
+    text-align: center;
+    color:white;
+    padding: 100px;
+
+    input{
+        border-radius: 30px;
+        padding: 10px 20px;
+        width: 30%;
+    }
+    button{
+        position: absolute;
+        background-color: orange;
+        color: white;
+        border: none;
+        right: 540px;
+        top: 3477px;
+        border-radius: 25px;
+        padding: 5px 10px;
+
+    }
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 30px 100px;
+
+    .sections{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h5{
+            margin-bottom: 20px;
+        }
+
+        li{
+            list-style: none;
+            opacity: 0.5;
+        }
+    }
+
+
+    .disclaimers{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        opacity: 0.5;
+    }
+}
 
 
