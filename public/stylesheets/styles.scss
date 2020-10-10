@@ -1,11 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap');
+
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
 nav{
     padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+
+    #logo{
+        width: 50px;
+    }
+
+    .navlinks{
+        display: flex;
+        justify-content: space-between;
+
+        li{
+            list-style: none;
+            margin: 20px;
+
+            a{
+                color: rgba(0, 0, 0, 0.5);
+            }
+
+            .active{
+                color: black;
+            }
+        }
+    }
 
     #joinus{
         border-radius: 25px;
@@ -15,6 +47,187 @@ nav{
     }
 }
 
-img{
-    width:200px;
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 0px 100px;
+    height:75vh;
+    overflow: hidden;
+
+    .written{
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        margin-bottom: 50px;
+        // padding-right: 100px;
+
+        h1{
+            font-size: 43px;
+
+            span{
+                color: orange
+            }
+        }
+
+        h3{
+            margin: 12px 0;
+            font-size: 18px;
+            opacity: 0.8;
+        }
+
+
+        form{
+
+            input{
+                width: 70%;
+                padding: 10px;
+                border: none;
+                box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.281) ;
+                outline: none;
+            }
+
+            button{
+                color: white;
+                position: relative;
+                right: 5px;
+                top: 2px;
+                font-size: 20px;
+                background-color: orange;
+                padding: 6px 10px;
+                border: none;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+        }
+    }
+    img{
+        flex: 2;
+        border-radius: 50%;
+        position: relative;
+        top: 60px;
+        left: 120px;
+        width: 00px;
+    }
+
 }
+
+.lookaround{
+    background-color: black;
+    color: white;
+    padding: 40px 100px 80px;
+
+
+    .look{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p{
+            font-size: 30px;
+        }
+
+        .arrow{
+            font-size: 40px;
+
+            .fas{
+                margin-left: 30px;
+                color:white;
+            }
+        }
+    }
+
+    .photos{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+
+        .img{
+            background-color: pink;
+            height: 450px;
+            width: 380px;
+            border-radius: 15px;
+        }
+        .img:nth-child(1){
+            background-image: url('/images/photo1.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+        .img:nth-child(2){
+            background-image: url('/images/photo2.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+        .img:nth-child(3){
+            background-image: url('/images/photo3.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}
+
+.marketplace{
+    padding: 60px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+
+    .marketplacewritten{
+
+        h1{
+            padding-bottom: 15px;
+        }
+        h1 + p{
+            padding-bottom: 50px;
+        }
+
+        .select{
+            padding-right: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            border-left: rgba(255, 166, 0, 0.3) 4px solid;
+        }
+
+        .example{
+            border-left: orange 4px solid;
+            padding: 30px;
+            position: relative;
+            right: 4px;
+            
+            h4{
+                padding:0;
+            }
+        }
+
+        
+        h4{
+            padding: 30px;
+        }
+    }
+
+    .color{
+        background: rgba(255, 166, 0, 0.425);
+        position: absolute;
+        width: 300px;
+        height: 400px;
+        left: 700px;
+        border-radius: 60px;
+    }
+
+    img{
+        border-radius: 20px;
+        width: 400px;
+        z-index: 2;
+    }
+}
+
+.app{
+    background-color: black;
+}
+
+
