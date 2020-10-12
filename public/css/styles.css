@@ -486,4 +486,51 @@ footer .disclaimers {
           align-items: center;
   opacity: 0.5;
 }
+
+.joinus {
+  height: 80vh;
+}
+
+.joinus h1 {
+  margin: 20px 0 50px;
+}
+
+.joinus h1, .joinus .joinusform {
+  text-align: center;
+}
+
+.joinus .joinusform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.joinus .joinusform input {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 60%;
+  padding: 8px 20px;
+  border-radius: 20px;
+}
+
+.joinus .joinusform button {
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  color: white;
+  background-color: orange;
+}
 /*# sourceMappingURL=styles.css.map */
