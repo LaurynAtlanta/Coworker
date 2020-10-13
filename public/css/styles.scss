@@ -59,6 +59,15 @@ body{
         border-radius: 20px;
 }
 
+@mixin button{
+    border-radius: 20px;
+    @include borderOutline;
+    color: white;
+    background-color: orange;
+    padding: 8px 20px;
+    margin: 10px 0;
+}
+
 
 
 //============================================================================
@@ -153,14 +162,13 @@ nav{
             }
 
             button{
-                color: white;
+                @include button;
                 position: relative;
                 right: 5px;
                 top: 2px;
                 font-size: 20px;
-                background-color: orange;
-                padding: 6px 10px;
-                @include borderOutline;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
                 border-top-right-radius: 10px;
                 border-bottom-right-radius: 10px;
             }
@@ -292,7 +300,7 @@ nav{
     .appwritten{
         padding-right: 200px;
         @include flexColumn;
-        align-items: left;
+        text-align: left;
 
         h1{
             margin-bottom: 25px;
@@ -304,15 +312,13 @@ nav{
             font-size: 18px;
             opacity: 0.7;
         }
-
-        button{
-            color: white;
-            background-color: orange;
-            @include borderOutline;
-            padding: 8px 20px;
-            border-radius: 25px;
-            margin-right: 10px;
-            font-size: 20px;
+        .buttons{
+            margin-right: auto;
+            button{
+                @include button;
+                margin-right: 10px;
+                font-size: 20px;
+            }
         }
     }
 
@@ -400,12 +406,9 @@ nav{
     }
     button{
         position: relative;
-        background-color: orange;
-        color: white;
-        @include borderOutline;
+        @include button;
         right: 0px;
-        border-radius: 25px;
-        padding: 9px 10px;
+        
     }
 }
 
@@ -438,6 +441,61 @@ footer{
         opacity: 0.5;
     }
 }
+
+//============================================================================
+//PRICING PAGE
+//============================================================================
+.priceheading{
+    @include flexColumn;
+    text-align: center;
+    button{
+        @include button;
+    }
+}
+
+.pricingblock{
+    @include flexSpace;
+    box-shadow: 1px 5px 20px rgba(128, 128, 128, 0.418);
+    margin: 20px 0px;
+    .price{
+        text-align: center;
+        padding: 15px 40px 15px 70px;
+        border-left: 1px rgba(128, 128, 128, 0.205) solid;
+        h2{
+            color: orange;
+
+        }
+        span{
+            font-size: 17px;
+        }
+        button{
+            @include button;
+        }
+    }
+    .price:nth-child(1){
+        padding: 15px 70px 15px 80px;
+    }
+}
+
+.infopricing{
+    @include flexSpace;
+    margin: 50px 300px;
+    img{
+        width: 400px;
+        border-radius: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 //============================================================================
 //CONTACT US PAGE
 //============================================================================
@@ -470,12 +528,8 @@ footer{
             }
 
             button{
-                border-radius: 30px;
+                @include button;
                 width: 60%;
-                @include borderOutline;
-                padding: 8px 20px;
-                color: white;
-                background-color: orange;
             }
         }
         .accent{

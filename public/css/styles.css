@@ -133,15 +133,19 @@ nav #joinus:hover {
 }
 
 .home .written form button {
+  border-radius: 20px;
+  border: none;
+  outline: none;
   color: white;
+  background-color: orange;
+  padding: 8px 20px;
+  margin: 10px 0;
   position: relative;
   right: 5px;
   top: 2px;
   font-size: 20px;
-  background-color: orange;
-  padding: 6px 10px;
-  border: none;
-  outline: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -317,9 +321,7 @@ nav #joinus:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  text-align: left;
 }
 
 .app .appwritten h1 {
@@ -333,13 +335,18 @@ nav #joinus:hover {
   opacity: 0.7;
 }
 
-.app .appwritten button {
-  color: white;
-  background-color: orange;
+.app .appwritten .buttons {
+  margin-right: auto;
+}
+
+.app .appwritten .buttons button {
+  border-radius: 20px;
   border: none;
   outline: none;
+  color: white;
+  background-color: orange;
   padding: 8px 20px;
-  border-radius: 25px;
+  margin: 10px 0;
   margin-right: 10px;
   font-size: 20px;
 }
@@ -461,13 +468,14 @@ nav #joinus:hover {
 
 .signup button {
   position: relative;
-  background-color: orange;
-  color: white;
+  border-radius: 20px;
   border: none;
   outline: none;
+  color: white;
+  background-color: orange;
+  padding: 8px 20px;
+  margin: 10px 0;
   right: 0px;
-  border-radius: 25px;
-  padding: 9px 10px;
 }
 
 footer {
@@ -509,6 +517,94 @@ footer .disclaimers {
       -ms-flex-align: center;
           align-items: center;
   opacity: 0.5;
+}
+
+.priceheading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.priceheading button {
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: orange;
+  padding: 8px 20px;
+  margin: 10px 0;
+}
+
+.pricingblock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 1px 5px 20px rgba(128, 128, 128, 0.418);
+          box-shadow: 1px 5px 20px rgba(128, 128, 128, 0.418);
+  margin: 20px 0px;
+}
+
+.pricingblock .price {
+  text-align: center;
+  padding: 15px 40px 15px 70px;
+  border-left: 1px rgba(128, 128, 128, 0.205) solid;
+}
+
+.pricingblock .price h2 {
+  color: orange;
+}
+
+.pricingblock .price span {
+  font-size: 17px;
+}
+
+.pricingblock .price button {
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: orange;
+  padding: 8px 20px;
+  margin: 10px 0;
+}
+
+.pricingblock .price:nth-child(1) {
+  padding: 15px 70px 15px 80px;
+}
+
+.infopricing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 50px 300px;
+}
+
+.infopricing img {
+  width: 400px;
+  border-radius: 20px;
 }
 
 .contactus {
@@ -576,13 +672,14 @@ footer .disclaimers {
 }
 
 .contactus .photocontent .contactusform button {
-  border-radius: 30px;
-  width: 60%;
+  border-radius: 20px;
   border: none;
   outline: none;
-  padding: 8px 20px;
   color: white;
   background-color: orange;
+  padding: 8px 20px;
+  margin: 10px 0;
+  width: 60%;
 }
 
 .contactus .photocontent .accent {
