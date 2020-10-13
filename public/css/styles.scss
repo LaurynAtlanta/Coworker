@@ -51,6 +51,14 @@ body{
     color: white;
 }
 
+@mixin input{
+        @include borderOutline;
+        margin-bottom: 20px;
+        width: 60%;
+        padding: 8px 20px;
+        border-radius: 20px;
+}
+
 
 
 //============================================================================
@@ -434,11 +442,53 @@ footer{
 //CONTACT US PAGE
 //============================================================================
 .contactus{
-    @include flexColumn;
-    height: 70vh;
-    .contactusform{
-        @include flexColumn;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    height: 80vh;
+    .photocontent{
+        @include flexSpace;
+        width: 80%;
+        margin: 40px 0 60px;
+
+        img{
+            width: 500px;
+            border-radius: 20px;
+            text-align: left;
+            z-index: 2;
+        }
+
+        .contactusform{
+            @include flexColumn;
+            width: 100%;
+            z-index: 2;
+
+            input, textarea{
+                @include input;
+                border: 2px black solid;
+            }
+
+            button{
+                border-radius: 30px;
+                width: 60%;
+                @include borderOutline;
+                padding: 8px 20px;
+                color: white;
+                background-color: orange;
+            }
+        }
+        .accent{
+            background-color: rgba(255, 166, 0, 0.637);
+            width: 630px;
+            height: 280px;
+            position: absolute;
+            left:75px;
+            z-index: 0;
+            border-radius: 20px;
+        }
     }
+
 }
 
 
@@ -478,7 +528,7 @@ footer{
         padding-top: 30px;
         padding-bottom: 20px;
         border-radius: 30px;
-        background-color: rgba(255, 166, 0, 0.562);
+        background-color: rgba(255, 166, 0, 1);
         
         display: flex;
         flex-direction: column;
@@ -488,19 +538,13 @@ footer{
         margin: 0 auto;
     
         input{
-            border: none;
-            outline: none;
-            text-align: center;
-            margin-bottom: 20px;
-            width: 60%;
-            padding: 8px 20px;
-            border-radius: 20px;
+            @include input;
         }
 
         button{
             border-radius: 30px;
-            border:none;
-            outline: none;
+            @include borderOutline;
+            width: 60%;
             padding: 8px 20px;
             color: orange;
             background-color: white;

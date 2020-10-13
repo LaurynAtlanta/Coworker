@@ -20,9 +20,21 @@ app.get('/', function(req, res){
     res.render('index');
 });
 
+app.get('/who', function(req, res){
+    res.render('who');
+});
+
+app.get('/location', function(req, res){
+    res.render('location');
+});
+
+app.get('/pricing', function(req, res){
+    res.render('pricing');
+});
+
 app.get('/contact', function(req, res){
     res.render('contact');
-})
+});
 
 app.get('/joinus', function(req, res){
     res.render('joinus');
