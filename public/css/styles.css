@@ -35,6 +35,9 @@ nav .navlinks {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav .navlinks li {
@@ -44,6 +47,11 @@ nav .navlinks li {
 
 nav .navlinks li a {
   color: rgba(0, 0, 0, 0.5);
+}
+
+nav .navlinks li a:hover {
+  text-decoration: none;
+  color: orange;
 }
 
 nav .navlinks li .active {
@@ -58,10 +66,18 @@ nav #joinus {
   border: lightgray 2px solid;
 }
 
+nav #joinus:hover {
+  border: orange 2px solid;
+  color: orange;
+}
+
 .home {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -110,9 +126,9 @@ nav #joinus {
 .home .written form input {
   width: 70%;
   padding: 10px;
-  border: none;
   -webkit-box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.281);
           box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.281);
+  border: none;
   outline: none;
 }
 
@@ -295,12 +311,15 @@ nav #joinus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
 }
 
 .app .appwritten h1 {
@@ -318,6 +337,7 @@ nav #joinus {
   color: white;
   background-color: orange;
   border: none;
+  outline: none;
   padding: 8px 20px;
   border-radius: 25px;
   margin-right: 10px;
@@ -330,13 +350,16 @@ nav #joinus {
 }
 
 .discover {
+  padding: 50px 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 50px 100px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .discover .left {
@@ -423,8 +446,8 @@ nav #joinus {
 
 .signup {
   background-color: black;
-  text-align: center;
   color: white;
+  text-align: center;
   padding: 100px;
 }
 
@@ -432,6 +455,7 @@ nav #joinus {
   border-radius: 30px;
   padding: 10px 20px;
   width: 30%;
+  border: none;
   outline: none;
 }
 
@@ -485,6 +509,39 @@ footer .disclaimers {
       -ms-flex-align: center;
           align-items: center;
   opacity: 0.5;
+}
+
+.contactus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70vh;
+}
+
+.contactus .contactusform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .joinus {

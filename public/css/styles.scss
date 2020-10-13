@@ -5,6 +5,14 @@
     padding:0;
     box-sizing: border-box;
 }
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+//============================================================================
+//MIXINS
+//============================================================================
 
 @mixin reviewPhoto{
     width: 50px;
@@ -15,16 +23,42 @@
     background-size: cover;
 }
 
-body{
-    font-family: 'Poppins', sans-serif;
+@mixin lookaroundPhotos{
+    background-position: center;
+    background-size: cover;
 }
 
-//NAVIGATION
-nav{
-    padding: 10px 50px;
+@mixin flexSpace{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@mixin flexColumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin borderOutline{
+    border: none;
+    outline:none;
+}
+
+@mixin blackSection{
+    background-color: black;
+    color: white;
+}
+
+
+
+//============================================================================
+//NAVIGATION
+//============================================================================
+nav{
+    padding: 10px 50px;
+    @include flexSpace;
     height: 15vh;
 
     #logo{
@@ -32,8 +66,7 @@ nav{
     }
 
     .navlinks{
-        display: flex;
-        justify-content: space-between;
+        @include flexSpace;
 
         li{
             list-style: none;
@@ -41,6 +74,10 @@ nav{
 
             a{
                 color: rgba(0, 0, 0, 0.5);
+            }
+            a:hover{
+                text-decoration: none;
+                color: orange;
             }
 
             .active{
@@ -56,13 +93,19 @@ nav{
         outline:none;
         border: rgb(211, 211, 211) 2px solid;
     }
+    #joinus:hover{
+        border: orange 2px solid;
+        color: orange;
+    }
 }
 
+//============================================================================
+//HOME PAGE
+//============================================================================
 
-//PART 1
+//TOP OF PAGE HOME
 .home{
-    display: flex;
-    align-items: center;
+    @include flexSpace;
     justify-content: left;
     padding: 0px 100px;
     height:75vh;
@@ -97,9 +140,8 @@ nav{
             input{
                 width: 70%;
                 padding: 10px;
-                border: none;
                 box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.281) ;
-                outline: none;
+                @include borderOutline;
             }
 
             button{
@@ -110,8 +152,7 @@ nav{
                 font-size: 20px;
                 background-color: orange;
                 padding: 6px 10px;
-                border: none;
-                outline:none;
+                @include borderOutline;
                 border-top-right-radius: 10px;
                 border-bottom-right-radius: 10px;
             }
@@ -128,17 +169,14 @@ nav{
 
 }
 
-//PART 2
+//LOOK AROUND
 .lookaround{
-    background-color: black;
-    color: white;
+    @include blackSection;
     padding: 40px 100px 80px;
 
 
     .look{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+       @include flexSpace;
 
         p{
             font-size: 30px;
@@ -155,9 +193,7 @@ nav{
     }
 
     .photos{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flexSpace;
         margin-top: 30px;
 
         .img{
@@ -168,29 +204,24 @@ nav{
         }
         .img:nth-child(1){
             background-image: url('/images/photo1.jpg');
-            background-position: center;
-            background-size: cover;
+            @include lookaroundPhotos;
         }
         .img:nth-child(2){
             background-image: url('/images/photo2.jpg');
-            background-position: center;
-            background-size: cover;
+            @include lookaroundPhotos;
         }
         .img:nth-child(3){
             background-image: url('/images/photo3.jpg');
-            background-position: center;
-            background-size: cover;
+            @include lookaroundPhotos;
         }
     }
 }
 
 
-//PART 3
+//MARKETPLACE
 .marketplace{
     padding: 60px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexSpace;
     overflow: hidden;
 
     .marketplacewritten{
@@ -244,19 +275,16 @@ nav{
 }
 
 
-//PART 4
+//DOWNLOAD APP
 .app{
-    background-color: black;
-    color:white;
+    @include blackSection;
     display: flex;
     padding: 50px 100px;
 
     .appwritten{
         padding-right: 200px;
-        display: flex;
-        flex-direction: column;
+        @include flexColumn;
         align-items: left;
-        justify-content: center;
 
         h1{
             margin-bottom: 25px;
@@ -272,7 +300,7 @@ nav{
         button{
             color: white;
             background-color: orange;
-            border: none;
+            @include borderOutline;
             padding: 8px 20px;
             border-radius: 25px;
             margin-right: 10px;
@@ -287,11 +315,10 @@ nav{
 }
 
 
-
+//DISCOVER
 .discover{
-    display: flex;
     padding: 50px 100px;
-    justify-content: space-between;
+    @include flexSpace;
 
     .left{
         margin-right: 80px;
@@ -323,9 +350,7 @@ nav{
                 margin-bottom: 30px;
             }
             .author{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+                @include flexSpace;
 
                 .about{
                     display: flex;
@@ -353,41 +378,41 @@ nav{
     }
 }
 
-
+//SIGN UP FORM
 .signup{
-    background-color: black;
+    @include blackSection;
     text-align: center;
-    color:white;
     padding: 100px;
 
     input{
         border-radius: 30px;
         padding: 10px 20px;
         width: 30%;
-        outline:none;
+        @include borderOutline;
     }
     button{
         position: relative;
         background-color: orange;
         color: white;
-        border: none;
-        outline:none;
+        @include borderOutline;
         right: 0px;
         border-radius: 25px;
         padding: 9px 10px;
     }
 }
 
+
+//============================================================================
+//FOOTER
+//============================================================================
+
 footer{
-    background-color: black;
-    color: white;
+    @include blackSection;
     padding: 30px 100px;
     font-size: 10px;
 
     .sections{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flexSpace;
 
         h5{
             margin-bottom: 20px;
@@ -401,12 +426,43 @@ footer{
 
 
     .disclaimers{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flexSpace;
         opacity: 0.5;
     }
 }
+//============================================================================
+//CONTACT US PAGE
+//============================================================================
+.contactus{
+    @include flexColumn;
+    height: 70vh;
+    .contactusform{
+        @include flexColumn;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//============================================================================
+//JOIN US PAGE
+//============================================================================
+
+
 
 .joinus{
     height: 80vh;

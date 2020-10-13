@@ -20,9 +20,14 @@ app.get('/', function(req, res){
     res.render('index');
 });
 
+app.get('/contact', function(req, res){
+    res.render('contact');
+})
+
 app.get('/joinus', function(req, res){
     res.render('joinus');
 });
+
 
 //LISTEN ON PORT 3000
 app.listen(3000, function(){
