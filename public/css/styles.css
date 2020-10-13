@@ -492,7 +492,7 @@ footer .disclaimers {
 }
 
 .joinus h1 {
-  margin: 20px 0 50px;
+  margin: 20px 0;
 }
 
 .joinus h1, .joinus .joinusform {
@@ -500,6 +500,10 @@ footer .disclaimers {
 }
 
 .joinus .joinusform {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 30px;
+  background-color: rgba(255, 166, 0, 0.562);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -507,7 +511,7 @@ footer .disclaimers {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 60%;
+  width: 50%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -518,6 +522,8 @@ footer .disclaimers {
 }
 
 .joinus .joinusform input {
+  border: none;
+  outline: none;
   text-align: center;
   margin-bottom: 20px;
   width: 60%;
@@ -529,8 +535,8 @@ footer .disclaimers {
   border-radius: 30px;
   border: none;
   outline: none;
-  padding: 10px 20px;
-  color: white;
-  background-color: orange;
+  padding: 8px 20px;
+  color: orange;
+  background-color: white;
 }
 /*# sourceMappingURL=styles.css.map */
