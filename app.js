@@ -20,8 +20,8 @@ app.get('/', function(req, res){
     res.render('index');
 });
 
-app.get('/who', function(req, res){
-    res.render('who');
+app.get('/how', function(req, res){
+    res.render('how');
 });
 
 app.get('/location', function(req, res){

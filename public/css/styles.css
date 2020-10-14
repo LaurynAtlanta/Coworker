@@ -519,6 +519,28 @@ footer .disclaimers {
   opacity: 0.5;
 }
 
+.howheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 60px;
+}
+
+.howheader .lefthow {
+  text-align: left;
+}
+
+.howheader .righthow img {
+  width: 200px;
+  border-radius: 20px;
+}
+
 .priceheading {
   display: -webkit-box;
   display: -ms-flexbox;
