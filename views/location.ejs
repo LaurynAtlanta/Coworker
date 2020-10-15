@@ -1,2 +1,63 @@
+
 <%- include('./partials/header')%>
+<div class="locations">
+    <h1>Locations</h1>
+    <p>CoWorker has locations in all of Germanys largest cities : Berlin, Munich, Hamburg, and more..</p>
+    <button>Book a spot</button>
+    <div class="locationssides">
+        <div class="leftlocations">
+            <h1>Cities</h1>
+            <div class="city">
+                <h3>Berlin</h3>
+                <ul>
+                    <li>1234 Schillerstrasse</li>
+                    <li>1234 Schillerstrasse</li>
+                    <li>1234 Schillerstrasse</li>
+                    <li>1234 Schillerstrasse</li>
+                </ul>
+            </div>
+            <div class="city">
+                <h3>Munich</h3>
+                <ul>
+                    <li>1234 Schillerstrasse</li>
+                    <li>1234 Schillerstrasse</li>
+                    <li>1234 Schillerstrasse</li>
+                    <li>1234 Schillerstrasse</li>
+                </ul>
+            </div>
+            <div class="city">
+                <h3>Hamburg</h3>
+                <ul>
+                    <li>1234 Schillerstrasse</li>
+                    <li>1234 Schillerstrasse</li>
+                    <li>1234 Schillerstrasse</li>
+                    <li>1234 Schillerstrasse</li>
+                </ul>
+            </div>
+            <div class='marker'><i class="fas fa-map-marker-alt"></i></div>
+        </div>
+        <div class="rightlocations">
+            <div id="map"></div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function initMap(){
+        let berlin = { lat: 52.541313, lng: 13.412877 };
+        let berlin2 = {lat: 52.641112, lng:13.391782}
+        let map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 10, center: berlin}
+        );
+        let marker = new google.maps.Marker({position: berlin, map: map})
+        let marker2 = new google.maps.Marker({position: berlin2, map: map})
+    }
+</script>
+
+<script defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGjF1GZhyG33BH9WD_FFcHNvFBPRXwoUw&callback=initMap">
+</script>
+
+
 <%- include('./partials/footer')%>

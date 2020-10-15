@@ -36,9 +36,11 @@ app.get('/contact', function(req, res){
     res.render('contact');
 });
 
-app.get('/joinus', function(req, res){
-    res.render('joinus');
+app.get('/joinlogin', function(req, res){
+    res.render('joinlogin');
 });
+
+
 
 
 //LISTEN ON PORT 3000

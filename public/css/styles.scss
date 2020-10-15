@@ -68,6 +68,19 @@ body{
     margin: 10px 0;
 }
 
+@mixin headerparagraph{
+    h1{
+        font-size: 44px;
+    }
+    p{
+        opacity: 0.8;
+        font-size: 1.1em;
+    }
+    margin-top: 30px;
+    button{
+        @include button;
+    }
+}
 
 
 //============================================================================
@@ -441,24 +454,131 @@ footer{
         opacity: 0.5;
     }
 }
+
+
+
+
+
+
 //============================================================================
 //HOW IT WORKS PAGE
 //============================================================================
 
 .howheader{
     @include flexSpace;
-    padding: 30px 60px;
+    @include headerparagraph;
+    padding: 50px 100px;
     .lefthow{
         text-align: left;
+        padding: 40px;
+        padding-bottom: 100px;
     }
     .righthow{
 
         img{
-            width: 200px;
+            width: 600px;
             border-radius: 20px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .howcolor{
+            position: absolute;
+            z-index: 0;
+            background-color: rgba(255, 166, 0, 0.466);
+            width: 600px;
+            height: 300px;
+            left:46%;
+            border-radius: 20px;
+            top: 17%;
         }
     }
 }
+
+.roadmap{
+    @include flexSpace;
+    @include blackSection;
+    padding: 50px;
+
+    .leftroadmap{
+        margin: 50px;
+        text-align: center;
+        i{
+            color: orange;
+        }
+    }
+
+    .rightroadmap{
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 50px;
+
+        button{
+            @include button;
+        }
+
+        .roadmappiece{
+            padding: 10px;
+            width: 400px;
+
+            h3{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.divider{
+    background-color: white;
+    height: 20px;
+    width: 100%;
+
+}
+
+//============================================================================
+//LOCATIONS PAGE
+//============================================================================
+.locations{
+    @include flexColumn;
+    @include headerparagraph;
+        .locationssides{
+            @include flexSpace;
+            width: 100%;
+            padding: 30px 100px 50px;
+            .leftlocations{
+                width: 250px;
+    
+                h1{
+                    margin-bottom: 20px;
+                }
+                .city{
+                    border-top: 2px rgba(0, 0, 0, 0.295) solid;
+                    padding-top: 10px;
+                }
+                li{
+                    margin-left: 30px;
+                }
+                .marker{
+                    position: absolute;
+                    opacity: 0.19;
+                    z-index: -1;
+                    font-size: 400px;
+                    top: 50px;
+                    color: grey;
+                }
+            }
+            .rightlocations{
+                align-self: flex-start;
+                #map{
+                    width: 900px;
+                    height: 600px;
+                }
+            }
+        }
+    }
+
+
+
 
 
 
@@ -468,9 +588,7 @@ footer{
 .priceheading{
     @include flexColumn;
     text-align: center;
-    button{
-        @include button;
-    }
+    @include headerparagraph;
 }
 
 .pricingblock{
@@ -520,11 +638,9 @@ footer{
 //CONTACT US PAGE
 //============================================================================
 .contactus{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    height: 80vh;
+    @include flexColumn;
+    @include headerparagraph;
+    height: 70vh;
     .photocontent{
         @include flexSpace;
         width: 80%;
@@ -586,43 +702,59 @@ footer{
 //JOIN US PAGE
 //============================================================================
 
-
-
-.joinus{
-    height: 80vh;
-
-    h1{
-        margin: 20px 0;
-    }
-
-    h1 , .joinusform{
-        text-align: center;
-    }
-    .joinusform{
-        padding-top: 30px;
-        padding-bottom: 20px;
-        border-radius: 30px;
+.joinlogin{
+    @include flexSpace;
+    .joinus{
         background-color: rgba(255, 166, 0, 1);
-        
-        display: flex;
-        flex-direction: column;
         width: 50%;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
+        height: 80vh;
+        @include flexColumn;
     
-        input{
-            @include input;
+        h1{
+            margin: 20px 0;
+            color: white;
         }
 
-        button{
-            border-radius: 30px;
-            @include borderOutline;
-            width: 60%;
-            padding: 8px 20px;
+        .joinusform{
+            width: 100%;
+            margin: 0 auto;
+            @include flexColumn;
+
+            input{
+                @include input;
+            }
+    
+            button{
+                @include button;
+                color: orange;
+                background-color: white;
+            }
+        }
+    }
+
+    .login{
+        width: 50%;
+        @include flexColumn;
+        padding: 30px 100px 20px 50px;
+        h1{
+            margin: 20px 0;
             color: orange;
-            background-color: white;
+        }
+        form{
+            width: 100%;
+            @include flexColumn;
+            input{
+                @include input;
+                border: solid black 2px;
+                width: 90%;
+            }
+            button{
+                @include button;
+            }
         }
     }
 }
+
+
+
 

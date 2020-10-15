@@ -529,16 +529,195 @@ footer .disclaimers {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 30px 60px;
+  margin-top: 30px;
+  padding: 50px 100px;
+}
+
+.howheader h1 {
+  font-size: 44px;
+}
+
+.howheader p {
+  opacity: 0.8;
+  font-size: 1.1em;
+}
+
+.howheader button {
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: orange;
+  padding: 8px 20px;
+  margin: 10px 0;
 }
 
 .howheader .lefthow {
   text-align: left;
+  padding: 40px;
+  padding-bottom: 100px;
 }
 
 .howheader .righthow img {
-  width: 200px;
+  width: 600px;
   border-radius: 20px;
+  z-index: 2;
+  position: relative;
+}
+
+.howheader .righthow .howcolor {
+  position: absolute;
+  z-index: 0;
+  background-color: rgba(255, 166, 0, 0.466);
+  width: 600px;
+  height: 300px;
+  left: 46%;
+  border-radius: 20px;
+  top: 17%;
+}
+
+.roadmap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+  color: white;
+  padding: 50px;
+}
+
+.roadmap .leftroadmap {
+  margin: 50px;
+  text-align: center;
+}
+
+.roadmap .leftroadmap i {
+  color: orange;
+}
+
+.roadmap .rightroadmap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 50px;
+}
+
+.roadmap .rightroadmap button {
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: orange;
+  padding: 8px 20px;
+  margin: 10px 0;
+}
+
+.roadmap .rightroadmap .roadmappiece {
+  padding: 10px;
+  width: 400px;
+}
+
+.roadmap .rightroadmap .roadmappiece h3 {
+  margin-bottom: 20px;
+}
+
+.divider {
+  background-color: white;
+  height: 20px;
+  width: 100%;
+}
+
+.locations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+}
+
+.locations h1 {
+  font-size: 44px;
+}
+
+.locations p {
+  opacity: 0.8;
+  font-size: 1.1em;
+}
+
+.locations button {
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: orange;
+  padding: 8px 20px;
+  margin: 10px 0;
+}
+
+.locations .locationssides {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 30px 100px 50px;
+}
+
+.locations .locationssides .leftlocations {
+  width: 250px;
+}
+
+.locations .locationssides .leftlocations h1 {
+  margin-bottom: 20px;
+}
+
+.locations .locationssides .leftlocations .city {
+  border-top: 2px rgba(0, 0, 0, 0.295) solid;
+  padding-top: 10px;
+}
+
+.locations .locationssides .leftlocations li {
+  margin-left: 30px;
+}
+
+.locations .locationssides .leftlocations .marker {
+  position: absolute;
+  opacity: 0.19;
+  z-index: -1;
+  font-size: 400px;
+  top: 50px;
+  color: grey;
+}
+
+.locations .locationssides .rightlocations {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.locations .locationssides .rightlocations #map {
+  width: 900px;
+  height: 600px;
 }
 
 .priceheading {
@@ -556,6 +735,16 @@ footer .disclaimers {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  margin-top: 30px;
+}
+
+.priceheading h1 {
+  font-size: 44px;
+}
+
+.priceheading p {
+  opacity: 0.8;
+  font-size: 1.1em;
 }
 
 .priceheading button {
@@ -637,11 +826,33 @@ footer .disclaimers {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 20px;
-  height: 80vh;
+  margin-top: 30px;
+  height: 70vh;
+}
+
+.contactus h1 {
+  font-size: 44px;
+}
+
+.contactus p {
+  opacity: 0.8;
+  font-size: 1.1em;
+}
+
+.contactus button {
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: orange;
+  padding: 8px 20px;
+  margin: 10px 0;
 }
 
 .contactus .photocontent {
@@ -714,23 +925,22 @@ footer .disclaimers {
   border-radius: 20px;
 }
 
-.joinus {
-  height: 80vh;
+.joinlogin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.joinus h1 {
-  margin: 20px 0;
-}
-
-.joinus h1, .joinus .joinusform {
-  text-align: center;
-}
-
-.joinus .joinusform {
-  padding-top: 30px;
-  padding-bottom: 20px;
-  border-radius: 30px;
+.joinlogin .joinus {
   background-color: #ffa600;
+  width: 50%;
+  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -738,17 +948,38 @@ footer .disclaimers {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 auto;
 }
 
-.joinus .joinusform input {
+.joinlogin .joinus h1 {
+  margin: 20px 0;
+  color: white;
+}
+
+.joinlogin .joinus .joinusform {
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.joinlogin .joinus .joinusform input {
   border: none;
   outline: none;
   margin-bottom: 20px;
@@ -757,13 +988,76 @@ footer .disclaimers {
   border-radius: 20px;
 }
 
-.joinus .joinusform button {
-  border-radius: 30px;
+.joinlogin .joinus .joinusform button {
+  border-radius: 20px;
   border: none;
   outline: none;
-  width: 60%;
+  color: white;
+  background-color: orange;
   padding: 8px 20px;
+  margin: 10px 0;
   color: orange;
   background-color: white;
+}
+
+.joinlogin .login {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 100px 20px 50px;
+}
+
+.joinlogin .login h1 {
+  margin: 20px 0;
+  color: orange;
+}
+
+.joinlogin .login form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.joinlogin .login form input {
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+  width: 60%;
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: solid black 2px;
+  width: 90%;
+}
+
+.joinlogin .login form button {
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: orange;
+  padding: 8px 20px;
+  margin: 10px 0;
 }
 /*# sourceMappingURL=styles.css.map */
