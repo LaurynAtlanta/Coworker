@@ -203,7 +203,6 @@ nav{
     @include blackSection;
     padding: 40px 100px 80px;
 
-
     .look{
        @include flexSpace;
 
@@ -231,6 +230,7 @@ nav{
             height: 450px;
             width: 380px;
             border-radius: 15px;
+            transition: all 2s ease;
         }
         .img:nth-child(1){
             background-image: url('/images/photo1.jpg');
