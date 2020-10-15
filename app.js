@@ -20,6 +20,7 @@ app.get('/', function(req, res){
     res.render('index');
 });
 
+
 app.get('/how', function(req, res){
     res.render('how');
 });

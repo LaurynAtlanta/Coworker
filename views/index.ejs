@@ -17,9 +17,7 @@
         <div class="look">
             <p>Take a look around</p>
             <div class="arrow">
-                <a href=""><i class="fas fa-arrow-left"></i></a>
-                <a href=""><i class="fas fa-arrow-right"></i></a>
-                
+                <i class="fas fa-arrow-right"></i>
             </div>
         </div>
         <div class="photos">
@@ -106,4 +104,25 @@
         <button type='submit'>Subscribe</button>
     </div>
 
+<script>
+    let rightArrow = document.querySelector('.fa-arrow-right');
+    let img1 = document.getElementsByClassName('img')[0];
+    let img2 = document.getElementsByClassName('img')[1];
+    let img3 = document.getElementsByClassName('img')[2];
+    let changed = false;
+
+    rightArrow.addEventListener('click', function(){
+        if(changed === false){
+            img1.style.backgroundImage = "url('/images/photo13.jpg')";
+            img2.style.backgroundImage = "url('/images/photo14.jpg')";
+            img3.style.backgroundImage = "url('/images/photo15.jpg')";
+            changed = true;
+        } else{
+            img1.style.backgroundImage = "url('/images/photo1.jpg')";
+            img2.style.backgroundImage = "url('/images/photo2.jpg')";
+            img3.style.backgroundImage = "url('/images/photo3.jpg')";
+            changed = false;
+        }
+    });
+</script>
 <%- include('./partials/footer')%>

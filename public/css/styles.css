@@ -190,6 +190,7 @@ nav #joinus:hover {
 .lookaround .look .arrow .fas {
   margin-left: 30px;
   color: white;
+  cursor: pointer;
 }
 
 .lookaround .photos {
