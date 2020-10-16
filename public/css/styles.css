@@ -211,8 +211,8 @@ nav #joinus:hover {
   height: 450px;
   width: 380px;
   border-radius: 15px;
-  -webkit-transition: all 2s ease;
-  transition: all 2s ease;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
 }
 
 .lookaround .photos .img:nth-child(1) {
@@ -231,6 +231,11 @@ nav #joinus:hover {
   background-image: url("/images/photo3.jpg");
   background-position: center;
   background-size: cover;
+}
+
+.lookaround .photos .img:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .marketplace {
@@ -268,6 +273,18 @@ nav #joinus:hover {
       -ms-flex-align: left;
           align-items: left;
   border-left: rgba(255, 166, 0, 0.3) 4px solid;
+}
+
+.marketplace .marketplacewritten .section {
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.marketplace .marketplacewritten .section:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .marketplace .marketplacewritten .example {
@@ -352,11 +369,29 @@ nav #joinus:hover {
   margin: 10px 0;
   margin-right: 10px;
   font-size: 20px;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.app .appwritten .buttons button:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .app img {
   width: 400px;
   border-radius: 20px;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.app img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .discover {
@@ -399,6 +434,10 @@ nav #joinus:hover {
   margin-bottom: 20px;
   padding: 20px 25px;
   border-radius: 15px;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
 }
 
 .discover .right .review h4 {
@@ -454,6 +493,11 @@ nav #joinus:hover {
   color: orange;
 }
 
+.discover .right .review:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
 .signup {
   background-color: black;
   color: white;
@@ -479,6 +523,15 @@ nav #joinus:hover {
   padding: 8px 20px;
   margin: 10px 0;
   right: 0px;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.signup button:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 footer {

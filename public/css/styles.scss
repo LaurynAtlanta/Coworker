@@ -230,7 +230,7 @@ nav{
             height: 450px;
             width: 380px;
             border-radius: 15px;
-            transition: all 2s ease;
+            transition: all 0.7s ease;
         }
         .img:nth-child(1){
             background-image: url('/images/photo1.jpg');
@@ -244,8 +244,13 @@ nav{
             background-image: url('/images/photo3.jpg');
             @include lookaroundPhotos;
         }
+        .img:hover{
+            transform: scale(1.03);
+        }
+
     }
 }
+
 
 
 //MARKETPLACE
@@ -269,6 +274,12 @@ nav{
             flex-direction: column;
             align-items: left;
             border-left: rgba(255, 166, 0, 0.3) 4px solid;
+        }
+        .section{
+            transition: transform .2s;
+        }
+        .section:hover{
+            transform: scale(1.03);
         }
 
         .example{
@@ -332,6 +343,10 @@ nav{
                 @include button;
                 margin-right: 10px;
                 font-size: 20px;
+                transition: transform .2s;
+            }
+            button:hover{
+                transform: scale(1.03);
             }
         }
     }
@@ -339,6 +354,10 @@ nav{
     img{
         width: 400px;
         border-radius: 20px;
+        transition: transform .2s;
+    }
+    img:hover{
+        transform: scale(1.05);
     }
 }
 
@@ -372,6 +391,7 @@ nav{
             margin-bottom: 20px;
             padding: 20px 25px;
             border-radius: 15px;
+            transition: transform .2s;
     
             h4{
                 font-size: 30px;
@@ -403,6 +423,9 @@ nav{
                 color: orange;
             }
         }
+        .review:hover{
+            transform: scale(1.03);
+        }
     }
 }
 
@@ -422,7 +445,10 @@ nav{
         position: relative;
         @include button;
         right: 0px;
-        
+        transition: transform .2s;
+    }
+    button:hover{
+        transform: scale(1.03);
     }
 }
 
